@@ -5,9 +5,29 @@ from app.models import db, User
 def seed_users():
 
     demo = User(username='Demo', email='demo@aa.io',
+                bio='I am the Demo User',
                 password='password')
 
+
     db.session.add(demo)
+
+
+    namename = "user"
+    password = "password"
+    etag = "@aa.io"
+    superBio1 = "I am number: "
+    superBio2 = ", user."
+    count = 0
+    while count < 100:
+        newUser = User(
+            username= namename + count,
+            email= namename + count + etag,
+            bio = superBio1 + count + superBio2,
+            password = (f'password{count}')
+        )
+        count = count + 1
+        db.session.add(newUser)
+
 
     db.session.commit()
 

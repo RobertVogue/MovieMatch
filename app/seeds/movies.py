@@ -1976,3 +1976,7 @@ def seed_movies():
         db.session.add(new_movie)
 
     db.session.commit()
+
+def undo_movies():
+    db.session.execute('TRUNCATE movies;')
+    db.session.commit()
