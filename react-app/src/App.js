@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
-import { authenticate } from "./services/auth";
+import { authenticate } from "./store/auth";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -28,7 +28,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar setAuthenticated={setAuthenticated} />
+      {authenticated && (
+        <NavBar
+          setAuthenticated={setAuthenticated}
+        />
+      )}
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm
