@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../store/auth";
 import "./index.css";
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
+  const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,6 +15,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     e.preventDefault();
     const user = await login(email, password);
     if (!user.errors) {
+      dispatch(setUser(user));
       setAuthenticated(true);
     } else {
       setErrors(user.errors);
@@ -25,6 +29,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   const updatePassword = (e) => {
     setPassword(e.target.value);
   };
+  const handleDemoClick = async (e) => {
+    const demoUser = await login("demo@aa.io", "password");
+    dispatch(setUser(demoUser));
+    setAuthenticated(true);
+  };
 
   if (authenticated) {
     return <Redirect to="/" />;
@@ -34,11 +43,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     <div className="Big">
       <div className="login-form">
         <form onSubmit={onLogin}>
-          <div>
-            {errors.map((error) => (
-              <div>{error}</div>
-            ))}
-          </div>
           <div>
             <label htmlFor="email">Email</label>
             <input
@@ -58,9 +62,29 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               value={password}
               onChange={updatePassword}
             />
-            <button type="submit">Login</button>
+            <button type="submit" onSubmit={onLogin}>Login</button>
+            <div className="err">
+              {errors.map((error) => (
+                <div>{error}</div>
+              ))}
+            </div>
           </div>
         </form>
+        <button type="click" onClick={handleDemoClick} className="demoButton">
+          Demo User
+        </button>
+        <div className="signup-link-box">
+          <div className="signup-link-text">
+            Don't have an account?&nbsp;
+            <NavLink
+              to="/signup"
+              style={{ textDecoration: "none" }}
+              className="signUp"
+            >
+              Sign up
+            </NavLink>
+          </div>
+        </div>
       </div>
     </div>
   );

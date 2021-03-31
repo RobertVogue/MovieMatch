@@ -1970,7 +1970,7 @@ def seed_movies():
         new_movie = Movie(
             title = titleList[count],
             synopsis = synopsisList[count],
-            photoURL = "https://m.media-amazon.com/images/M/MV5BOWExYzliNjYtMmVhYi00NTdmLWE1OGItZTNmYTY2YzZmNzNhXkEyXkFqcGdeQXVyODA4ODIwNDM@._V1_.jpg",
+            movieArt = "https://m.media-amazon.com/images/M/MV5BOWExYzliNjYtMmVhYi00NTdmLWE1OGItZTNmYTY2YzZmNzNhXkEyXkFqcGdeQXVyODA4ODIwNDM@._V1_.jpg",
         )
         count = count + 1
         db.session.add(new_movie)
