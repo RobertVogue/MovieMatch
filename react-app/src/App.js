@@ -4,14 +4,17 @@ import { Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
+import Footer from "./components/FootBar"
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/auth";
 import * as sessionActions from "./store/auth";
+
 
 function App() {
   const dispatch = useDispatch();
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  // eslint-disable-next-line
   const [sessionUser, setSessionUser] = useState({});
 
   useEffect(() => {
@@ -44,7 +47,7 @@ function App() {
             setAuthenticated={setAuthenticated}
           />
         </Route>
-        <Route path="/sign-up" exact={true}>
+        <Route path="/signup" exact={true}>
           <SignUpForm
             authenticated={authenticated}
             setAuthenticated={setAuthenticated} />
@@ -53,6 +56,11 @@ function App() {
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+      {authenticated && (
+        <Footer
+          setAuthenticated={setAuthenticated}
+        />
+        )}
     </>
   );
 }

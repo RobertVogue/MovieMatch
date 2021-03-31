@@ -6,13 +6,14 @@ import './index.css'
 const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
 
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const user = await signUp(username, email, password);
+      const user = await signUp(username, email, bio, password);
       if (!user.errors) {
         setAuthenticated(true);
       }
@@ -25,6 +26,10 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
 
   const updateEmail = (e) => {
     setEmail(e.target.value);
+  };
+
+  const updateBio = (e) => {
+    setBio(e.target.value);
   };
 
   const updatePassword = (e) => {
@@ -62,6 +67,16 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
             ></input>
           </div>
           <div>
+            <label>Bio</label>
+            <textarea
+              type="text"
+              name="bio"
+              className="textarea"
+              onChange={updateBio}
+              value={bio}
+            ></textarea>
+          </div>
+          <div>
             <label>Password</label>
             <input
               type="password"
@@ -80,7 +95,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               required={true}
             ></input>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" onSubmit={onSignUp}>Sign Up</button>
         </form>
         <div className="login-link-box">
           <div className="login-link-text">
