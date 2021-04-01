@@ -9,13 +9,23 @@ const Home = () => {
 return (
     <div className="homePage">
         <div className="HomeTopHalf">
-            <div className="HomeTopLeft"></div>
-            <div className="HomeTopRight"></div>
+            <div className="HomeTopLeft">
+                <h2>User Info</h2>
+            </div>
+            <div className="HomeTopRight">
+                <h2>Movie Info</h2>
+            </div>
         </div>
         <div className="HomeBottomHalf">
-            <div className="HomeLeftSection"></div>
-            <div className="HomeMiddleSection"></div>
-            <div className="HomeRightSection"></div>
+            <div className="HomeLeftSection">
+                <h2>Friends</h2>
+            </div>
+            <div className="HomeMiddleSection">
+                <h2>Swipe Object</h2>
+            </div>
+            <div className="HomeRightSection">
+                <h2>Swipe Info</h2>
+            </div>
         </div>
     </div>
 )
