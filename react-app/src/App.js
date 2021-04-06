@@ -64,7 +64,7 @@ function App() {
         <ProtectedRoute path="/movies" exact={true} authenticated={authenticated}>
           <Movie />
         </ProtectedRoute>
-        <ProtectedRoute path="/profile" exact={true} authenticated={authenticated}>
+        <ProtectedRoute path="/:username" exact={true} authenticated={authenticated}>
           <Profile />
         </ProtectedRoute>
         <ProtectedRoute path="/search" exact={true} authenticated={authenticated}>

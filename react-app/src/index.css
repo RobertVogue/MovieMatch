@@ -551,31 +551,21 @@ margin-left: 10px;
 .HomeTopHalf {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100px;
+    position: fixed;
+    width: 1800px;
+    height: 240px;
     margin-top: 90px;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow-x: scroll;
     border-bottom: 3px solid black;
 }
-.HomeTopLeft {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100px;
-    border-right: 3px solid black;
-}
-.HomeTopRight {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100px;
-}
+
 .HomeBottomHalf {
     display: flex;
     flex-direction: row;
+    position: fixed;
+    margin-top: 330px;
     width: 100%;
     height: 780px;
 }
@@ -585,7 +575,7 @@ margin-left: 10px;
     align-items: center;
     width: 20%;
     height: 780px;
-    border-right: 3px solid black;
+
 }
 .HomeMiddleSection {
     display: flex;
@@ -601,5 +591,76 @@ margin-left: 10px;
     align-items: center;
     width: 20%;
     height: 780px;
-    border-left: 3px solid black;
+
+}
+.swipeDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 25px;
+    width: 800px;
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 500px;
+}
+.moviePage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.MovieTopHalf {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    border-right: 2px solid black;
+    margin-top: 90px;
+}
+
+.MovieTopLeft {
+    width: 50%;
+    height: 100px;
+    border-right: 2px solid black;
+}
+.MovieTopRight {
+    width: 50%;
+    height: 100px;
+    border-left: 2px solid black;
+}
+
+
+.MovieBottomHalf {
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+.MovieLeftSection {
+    width: 10%;
+}
+.MovieRightSection {
+    width: 10%;
+}
+.MovieMiddleSection {
+    width: 80%;
+    overflow-x: scroll;
+}
+.row_posters {
+    display: flex;
+}
+.row_poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 200px;
+    margin-right: 10px;
+    transition: transform 500ms;
+    cursor: pointer;
+    transform: scale(.9);
+    backface-visibility: hidden;
+
+}
+.row_poster:hover {
+    transform: scale(1);
 }

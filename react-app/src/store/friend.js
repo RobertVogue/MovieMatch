@@ -65,7 +65,7 @@ export const newUnfriendUser = (friend1Id, friend2Id) => async (dispatch) => {
 
 const initialState = {};
 
-const friendSession = (state = initialState, action) => {
+const friendReducer = (state = initialState, action) => {
     switch (action.type) {
         case IS_FRIEND:
             return { ...state, following: [...action.friends.friends] };
@@ -82,4 +82,4 @@ const friendSession = (state = initialState, action) => {
     }
 };
 
-export default friendSession;
+export default friendReducer;

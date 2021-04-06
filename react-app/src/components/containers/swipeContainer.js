@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TinderCard from 'react-tinder-card'
-
-// const onSwipe = (direction) => {
-//     console.log('You swiped: ' + direction)
-//   }
-
-//   const onCardLeftScreen = (myIdentifier) => {
-//     console.log(myIdentifier + ' left the screen')
-//   }
-
-//   return (
-//     <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard>
-//   )
+import requests from "../../requests";
+import Row from '../additional/Movie'
 
 const SwipeContainer = () => {
     const onSwipe = (direction) => {
@@ -29,13 +19,13 @@ const SwipeContainer = () => {
                 preventSwipe={['right', 'left']}>
             </TinderCard>
             <div className="swipeTitle">
-                Example Title
+                <h1>Title of Card</h1>
             </div>
             <div className="swipeImage">
-                Example Picture
+                <img />
             </div>
             <div className="swipeSyn">
-                Example Text
+                Description
             </div>
         </div>
     </div>

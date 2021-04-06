@@ -1,5 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { useHistory, } from "react-router-dom";
+import FriendsContainer from '../../components/containers/friendsContainer'
+import MessageContainer from '../../components/containers/messagesContainer'
+import MeetingContainer from '../../components/containers/meetingContainer'
+import SwipeContainer from '../../components/containers/swipeContainer'
+import requests from "../../requests";
+import Row from '../additional/Movie'
 import '../../index.css'
 
 const Home = () => {
@@ -9,23 +15,16 @@ const Home = () => {
 return (
     <div className="homePage">
         <div className="HomeTopHalf">
-            <div className="HomeTopLeft">
-                <h2>User Info</h2>
-            </div>
-            <div className="HomeTopRight">
-                <h2>Movie Info</h2>
-            </div>
+        <Row title="" fetchUrl={requests.fetchTrending}/>
         </div>
         <div className="HomeBottomHalf">
             <div className="HomeLeftSection">
-                <h2>Friends</h2>
+                <FriendsContainer />
             </div>
             <div className="HomeMiddleSection">
-                <h2>Swipe Object</h2>
+                <SwipeContainer />
             </div>
-            <div className="HomeRightSection">
-                <h2>Swipe Info</h2>
-            </div>
+            <div className="HomeRightSection"></div>
         </div>
     </div>
 )
