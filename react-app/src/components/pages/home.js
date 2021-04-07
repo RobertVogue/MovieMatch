@@ -15,14 +15,14 @@ const Home = () => {
 return (
     <div className="homePage">
         <div className="HomeTopHalf">
-        <Row title="" fetchUrl={requests.fetchTrending}/>
+        <Row title="" fetchUrl={requests.fetchEmAll}/>
         </div>
         <div className="HomeBottomHalf">
             <div className="HomeLeftSection">
                 <FriendsContainer />
             </div>
             <div className="HomeMiddleSection">
-                <SwipeContainer />
+                <SwipeContainer fetchUrl={requests.fetchEmAll}/>
             </div>
             <div className="HomeRightSection"></div>
         </div>

@@ -48,6 +48,8 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     <div className="Big">
       <div className="signup-form">
         <form onSubmit={onSignUp}>
+          <h1>MovieMatch</h1>
+          <h2>Sign Up</h2>
           <div>
             <label>User Name</label>
             <input
@@ -100,7 +102,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
         <div className="login-link-box">
           <div className="login-link-text">
             Have an account?&nbsp;
-          <NavLink to="/login" style={{ textDecoration: 'none' }}>
+          <NavLink to="/login" className="signUp" style={{ textDecoration: 'none' }}>
               Log in
           </NavLink>
           </div>

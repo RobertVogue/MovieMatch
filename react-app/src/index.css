@@ -1,157 +1,5 @@
-/*Univeral Button */
-.ultra {
-    min-width: 100px;
-    max-width: 140px;
-    padding: 9px 25px;
-    background-color: black;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    /* transition: all 0.3s ease 0s; */
-    margin: 5px;
-    outline: none;
-    color:white;
-}
-
-.ultra:hover {
-    background-color:#90C2E7;
-    background-size: 300% 300%;
-    color: black;
-}
-
-/* Discovery & Navigation*/
-
-/* Color Palette
-Gunmetal #2B303A
-Middle Blue #92DCE5
-Lavender Blush #EEE5E9
-Gray Web #7C7C7C
-Cinnabar #D64933
-*/
-
-.allImages {
-    max-width       : 335px;
-    min-width       : 335px;
-    min-height      : auto;
-    height          : 200px;
-}
-
-/* Added hover spin effect to allImages */
-.allImages {
-    transition: transform .7s ease-in-out;
-    position:relative;
-}
-.boxxy:hover .allImages {
-    opacity: 0.3
-}
-.boxxy:hover .left {
-    display: block;
-}
-.boxxy:hover .right {
-    display: block;
-}
-.boxxy {
-    position: relative;
-    text-align: center;
-}
-.left {
-    display: none;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-}
-.right {
-    display: none;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-}
-
-.OuterMost {
-    display       : flex;
-    flex-direction: column;
-    width         : 100%;
-    height        : 100%;
-    color: transparent;
-}
-.outerTop {
-    text-align: center;
-    width     : 100%;
-    height    : 91px;
-}
-.outerTop2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 200px;
-}
-.outerBottom {
-    display       : flex;
-    flex-direction: row;
-    width         : 100%;
-}
-.RightQuad {
-    width: 22%;
-}
-.LeftQuad {
-    width: 24%
-}
-
-.MiddleQuad {
-    /* Changed width to 65% */
-    width           : 65%;
-    display         : flex;
-    flex-direction  : row;
-    flex-wrap       : wrap;
-    background-color: #CED3DC;
-    /* Added space-around allImages */
-    justify-content : space-around;
-}
-.RightQuad2 {
-    width         : 22%;
-    display       : flex;
-    flex-direction: column;
-}
-.nameandphoto {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    color: black;
-    font-weight: bolder;
-    font-size: 20px;
-    width: 700px;
-    height: 100px;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 100px;
-}
-.photohere {
-    height       : 75px;
-    width        : 75px;
-    border       : 2px solid black;
-    border-radius: 50%;
-}
-.followbuttons {
-    width          : 150px;
-    height         : 100px;
-    display        : flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 100px;
-}
 /* Navigation */
 
-/* TODO Add site wide styles */
 .Footer {
     width: 100%;
     height: 20px;
@@ -215,9 +63,7 @@ Cinnabar #D64933
 #nav A:hover {
     border-bottom: 4px solid #2B303A;
 }
-/* #nav A:hover, #nav button:hover {
-    border-bottom: 3px solid rgb(0, 87, 7);
-} */
+
 #nav button {
     display         : block;
     color           : #EEE5E9;
@@ -298,249 +144,6 @@ Cinnabar #D64933
     color: #EEE5E9;
     font-weight: bolder;
 }
-.captionTextArea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    font-weight: bolder;
-}
-
-#header_search {
-    color:#EEE5E9;
-    text-align: center;
-}
-/* Personal Feed */
-.personal-feed {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.feed-container {
-    width: 50%;
-    background-color: #CED3DC;
-
-
-}
-
-.RightQuad3 {
-    width: 50%;
-
-}
-.suggestions {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    height: 600px;
-    width: 360px;
-    margin-top: 92px;
-    background-color: white;
-    color: black;
-
-
-}
-.userspot {
-    height: 80px;
-    width: 300px;
-}
-.topside {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 80px;
-    width: 300px;
-}
-.leftSide {
-    height: 80px;
-    width: 80px;
-}
-.usertitle {
-    height: 80px;
-    width: 250px;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 24px;
-    color: black
-}
-.undertitle {
-    font-size: 16px;
-    color: black
-}
-.rightSide {
-    height: 80px;
-    width: 150px;
-}
-.leftPhoto {
-    height: 80px;
-    width: 80px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: 2px solid #A31621;
-    border-radius: 50%;
-}
-
-.headertext {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    height: 55px;
-    margin-top: 40px;
-    margin-right: 170px;
-    color: black;
-}
-.person {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    width: 150px;
-    text-align: start;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 30px;
-    color: black;
-}
-.github {
-    width: 20px;
-    height: 20px;
-    background-image: url('./images/Github-icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    color: white;
-}
-.linkedin {
-    width: 20px;
-    height: 20px;
-    background-image: url('./images/Linkedin-icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    color: white;
-}
-.angel {
-    width: 20px;
-    height: 20px;
-    background-image: url('./images/Angellist-icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    color: white;
-
-}
-.github a {
-    text-decoration: none;
-    font-size: 14px;
-    width: 200px;
-    cursor: pointer;
-    margin-left: 25px;
-    color: black;
-}
-.linkedin a {
-    text-decoration: none;
-    font-size: 14px;
-    width: 200px;
-    cursor: pointer;
-    margin-left: 25px;
-    color: black;
-}
-.angel a {
-    text-decoration: none;
-    font-size: 14px;
-    width: 200px;
-    cursor: pointer;
-    margin-left: 25px;
-    color: black;
-}
-.LeftQuad3 {
-    width: 28%
-}
-.following-card {
-    color: black;
-    width: 100%;
-    margin-bottom: 60px;
-    border-bottom: 20px solid white;
-    border-radius: 3px;
-    background-color: #CED3DC;
-}
-.card-username {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px;
-    font-size: 20px;
-    font-weight: 800;
-}
-.card-photo img {
-    width: 100%;
-    max-height: 500px;
-
-}
-.card-comments {
-    height: 100px;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-.card-bottom-content {
-    padding: 8px;
-    padding-bottom: 30px;
-}
-.comments69 {
-    display: flex;
-    width: 500px;
-    text-align: left;
-    margin-left: 150px;
-    align-items: center;
-
-}
-.This420 {
-    font-size: 18px;
-    font-weight: bolder;
-    padding-right: 20px;
-}
-.This8008135 {
-    padding-right: 20px;
-}
-
-.card-caption {
-    height: 90px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: start;
-    margin-left: 150px;
-    overflow: hidden;
-
-
-}
-.lastdiv {
-margin-left: 10px;
-}
-.btn-div {
-    display: flex;
-    text-align: start;
-}
-.caption-user {
-    visibility: hidden;
-    font-size: 20px;
-    font-weight: 800;
-    color: black;
-}
-.caption-string {
-    font-size: 25px;
-    font-weight: bolder;
-    text-align: start;
-    width: 400px;
-
-}
-
-.Link {
-    margin-left: 20px;
-    color: black;
-    text-decoration: none;
-}
-.title {
-    text-align: center;
-}
-.first-last {
-    text-align: center;
-}
 
 /* Pages */
 .homePage {
@@ -558,7 +161,13 @@ margin-left: 10px;
     margin-left: 50px;
     margin-right: 50px;
     overflow-x: scroll;
-    border-bottom: 3px solid black;
+}
+.ownspot {
+    height: 50px;
+}
+.perma {
+    position:fixed;
+    z-index: 1;
 }
 
 .HomeBottomHalf {
@@ -586,23 +195,49 @@ margin-left: 10px;
 
 }
 .HomeRightSection {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 20%;
     height: 780px;
 
 }
+.swipeCard {
+    margin-top: 25px;
+}
 .swipeDetails {
     display: flex;
     flex-direction: column;
-    align-items: center;
     cursor: pointer;
-    margin-top: 25px;
-    width: 800px;
-    border: 3px solid black;
-    border-radius: 25px;
-    height: 500px;
+    width: 400px;
+    height: 570px;
+}
+.swipeTitle {
+    display: none;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+
+}
+.swipeSyn {
+    display: none;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    max-height: 350px;
+    overflow-y: hidden;
+    transform: translate(-50%, -50%);
 }
 .moviePage {
     width: 100%;
@@ -653,7 +288,7 @@ margin-left: 10px;
 .row_poster {
     object-fit: contain;
     width: 100%;
-    max-height: 200px;
+    max-height: 170px;
     margin-right: 10px;
     transition: transform 500ms;
     cursor: pointer;
@@ -661,6 +296,53 @@ margin-left: 10px;
     backface-visibility: hidden;
 
 }
+.addButton {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    top: 90px;
+    right: 127px;
+    min-width: 100px;
+    height: 20px;
+    z-index: 1;
+    transition: transform 500ms;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
 .row_poster:hover {
     transform: scale(1);
+}
+
+
+.row_poster3 {
+    object-fit: contain;
+    width: 100%;
+    max-height: 600px;
+    margin-right: 10px;
+    transition: transform 500ms;
+    cursor: pointer;
+    transform: scale(.9);
+    backface-visibility: hidden;
+
+}
+
+.swipeDetails:hover .row_poster3 {
+    opacity: 0.3;
+}
+.swipeDetails:active .row_poster3 {
+    opacity: 1;
+}
+
+.swipeDetails:hover .swipeTitle {
+    display: block;
+}
+.swipeDetails:hover .swipeSyn {
+    display: block;
+}
+.swipeDetails:active .swipeTitle {
+    display: none;
+}
+.swipeDetails:active .swipeSyn {
+    display: none;
 }

@@ -17,13 +17,17 @@ function Row({ title, fetchUrl }) {
     }, [fetchUrl])
     return (
         <div className="row">
-            <h2>{title}</h2>
+            <div className="ownspot">
+                <h2 className="perma">{title}</h2>
+            </div>
             <div className="row_posters">
                 {movies.map(movie => (
+                   <>
                     <img
                     key={movie.id}
                     className="row_poster"
-                    src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+                    src={`${base_url}${movie.poster_path}`} alt={movie.name}/>
+                    </>
                 ))}
 
             </div>

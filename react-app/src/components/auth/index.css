@@ -1,47 +1,52 @@
-
-
   .Big {
     display: flex;
     width: 100%;
-    /* Added to display for even space */
     justify-content: space-around;
-    /* Bo's CSS */
-    /* height            : 87vh; */
+    height: 98vh;
+    overflow: hidden;
+    background-image: url('../../images/collage.jpg');
+    background-size: 200% 200%;
+    animation: scope 300s infinite;
+    animation-direction: normal;
   }
+  @keyframes scope {
+    0% {
+      background-position: 0% 0%;
+    }
 
-
+    60% {
+      background-position: 300% 400%;
+    }
+  }
   .err {
     color: red;
     font-weight: bolder;
     text-align: left;
     margin-left: 43px;
   }
-
   .login-form {
-    /* Bo's CSS */
-    /* background-color: #fafafa; */
+    background-color: white;
+    margin-top: 150px;
     margin-bottom: 500px;
     margin-left: 0;
-    height: 600px;
+    height: 500px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
   }
-
   .login-form h1 {
     font-family: "Neue Helvetica";
     text-align: center;
     font-size: 40px;
     color: rgb(20, 20, 20);
   }
-
   .login-form form {
     padding: 10px;
     max-width: 350px;
     margin: 0 auto;
   }
-
   .login-form input {
     background-color: #fafafa;
     border: 1px solid #dbdbdb;
@@ -51,9 +56,8 @@
     padding: 10px;
     width: 250px;
   }
-
   .login-form button {
-    background: linear-gradient(45deg, rgb(0, 219, 235), rgb(0, 95, 219));
+    background: linear-gradient(45deg, rgb(200, 57, 0), rgb(236, 193, 0));
     color: white;
     font-weight: bolder;
     font-size: 18px;
@@ -64,50 +68,39 @@
     padding: 10px;
     width: 272px;
   }
-
   .signup-link-box {
     background-color: #fff;
     padding: 10px;
     max-width: 350px;
     margin: 10px auto;
   }
-
-  /* Changed color of signUp link */
   .signUp {
-    color: rgb(11, 117, 184);
+    color: rgb(187, 84, 0);
   }
-
-
-
-  /* Sign Up CSS */
-
   .signup-form {
-    /* background-color: #fafafa; */
+    background-color: white;
+    margin-top: 100px;
     margin-bottom: 500px;
     margin-left: 0;
     height: 700px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
   }
-
   .signup-form h1 {
     font-family: "Neue Helvetica";
     text-align: center;
     font-size: 40px;
     color: rgb(20, 20, 20);
   }
-
   .signup-form form {
-    /* background-color: #fff; */
-
     padding: 10px;
     max-width: 350px;
     margin: 0 auto;
     text-align: center;
   }
-
   .signup-form input {
     background-color: #fafafa;
     border-radius: 3px;
@@ -117,9 +110,9 @@
     padding: 10px;
     width: 250px;
   }
-
   .signup-form button {
-    background: linear-gradient(45deg, rgb(0, 219, 235), rgb(0, 95, 219));
+    background: linear-gradient(45deg, rgb(200, 57, 0), rgb(236, 193, 0));
+    color: white;
     border: none;
     outline: none;
     border-radius: 4px;
@@ -127,27 +120,6 @@
     padding: 10px;
     width: 275px;
   }
-
-  .signup-form button:hover {
-    background: linear-gradient(45deg, rgb(0, 219, 235), rgb(0, 95, 219));
-    background-size: 300% 300%;
-    animation: easy 4s ease-in-out infinite;
-  }
-
-  @keyframes easy {
-    0% {
-      background-position: 0% 0%;
-    }
-
-    50% {
-      background-position: 100% 100%;
-    }
-
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-
   .login-link-box {
     background-color: #fff;
     padding: 10px;

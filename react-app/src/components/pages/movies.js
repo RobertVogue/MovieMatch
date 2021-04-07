@@ -12,7 +12,7 @@ const Movie = () => {
 
     useEffect(() => {
         const getPosts = async () => {
-          const response = await fetch(`/api/movies/all/${sessionUser?.id}`);
+          const response = await fetch(`/api/movies/${sessionUser?.id}`);
           const data = await response.json();
           setAllPosts(data.posts);
         };
@@ -41,6 +41,7 @@ const Movie = () => {
             <div className="MovieMiddleSection">
               <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
               <Row title="Top Movies" fetchUrl={requests.fetchTopRated}/>
+              <Row title="This Year's Hits" fetchUrl={requests.fetchThisYearsHits}/>
             </div>
             <div className="MovieRightSection"></div>
         </div>

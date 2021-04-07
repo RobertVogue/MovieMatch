@@ -4,7 +4,7 @@ from app.models import db, Movie, friends, User
 movie_routes = Blueprint("movies", __name__)
 
 
-@movie_routes.route('/all')
+@movie_routes.route('/')
 # Query all posts from users that the session user is not following
 def posts(id):
     all_user_ids = set([x for (x,) in db.session.query(User.id).all()])
