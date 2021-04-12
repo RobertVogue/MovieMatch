@@ -9,7 +9,6 @@ import Friend from "./components/pages/friends";
 import Home from "./components/pages/home";
 import Movie from "./components/pages/movies";
 import Profile from "./components/pages/profile";
-import Search from "./components/pages/search";
 import Meeting from "./components/pages/meetings";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/auth";
@@ -63,12 +62,6 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/movies" exact={true} authenticated={authenticated}>
           <Movie />
-        </ProtectedRoute>
-        <ProtectedRoute path="/:username" exact={true} authenticated={authenticated}>
-          <Profile />
-        </ProtectedRoute>
-        <ProtectedRoute path="/search" exact={true} authenticated={authenticated}>
-          <Search />
         </ProtectedRoute>
         <ProtectedRoute path="/meetings" exact={true} authenticated={authenticated}>
           <Meeting />

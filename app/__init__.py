@@ -22,7 +22,7 @@ app = Flask(__name__)
 login = LoginManager(app)
 login.login_view = 'auth.unauthorized'
 
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 
 @login.user_loader
@@ -80,19 +80,19 @@ def react_root(path):
     return app.send_static_file('index.html')
 
 @socketio.on('connect')
-def connection():
-    emit("Connected", {"data": "Connected"})
+def test_connect():
+    print('connected')
+    emit("success", {"data": "Connected"})
 
 
-@socketio.on('message')
-def message(data):
-    print(f"\n\n{data}\n\n")
+@socketio.on('new message')
+def new_message(data):
     room = data['room']
-    emit('load messge', room=room)
+    emit('load message', room=room)
 
 
 @socketio.on('join')
-def join(data):
+def on_join(data):
     username = data['username']
     room = data['room']
     join_room(room)

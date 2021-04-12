@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { useHistory, } from "react-router-dom";
 import FriendsContainer from '../../components/containers/friendsContainer'
 import MessageContainer from '../../components/containers/messagesContainer'

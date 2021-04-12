@@ -46,14 +46,7 @@ const NavBar = ({ setAuthenticated }) => {
             id="ez"
             to="/meetings"
             exact={true}
-          >Messages</NavLink>
-        </li>
-        <li>
-          <NavLink
-            id="ez"
-            to={`/${sessionUser?.username}`}
-            exact={true}
-          >Profile</NavLink>
+          >Messaging</NavLink>
         </li>
         <li>
             <LogoutButton setAuthenticated={setAuthenticated} />

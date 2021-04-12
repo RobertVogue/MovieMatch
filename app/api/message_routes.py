@@ -10,12 +10,9 @@ def chat():
     new_message = Message(
         body=requested['messageInput'],
         requesterId=requested['user']['id'],
-        meetingId=requested['meetingId']
+        meetingId=requested['meeting_id']
     )
 
     deb.session.add(new_message)
     db.session.commit()
     return jsonify(requested)
-
-
-

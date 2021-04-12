@@ -6,6 +6,7 @@ import './index.css';
 import configureStore from "./store/index";
 import * as sessionActions from "./store/auth";
 import * as postActions from "./store/poster";
+import { SocketContext, socket } from './components/static/SocketProvider';
 import App from './App';
 
 const store = configureStore();
@@ -21,9 +22,11 @@ if (process.env.NODE_ENV !== "production") {
 function Root() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <SocketContext.Provider value={socket}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </SocketContext.Provider>
     </Provider>
   );
 }
