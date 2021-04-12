@@ -22,8 +22,18 @@ def add_meeting():
 def grab_meeting():
     meetingId = request.json
     helper = Meeting.query.get(meetingId)
-    grab_meeting = Meeting(
+    meeting = Meeting(
         id = helper.id,
         requestedId = helper.requestedId
     )
 
+    foundMeeting = meeting.to_dict()
+    formattedMessages = [mess.to_dict() for
+                         mess in helper.message]
+
+    for formattedMessage in formattedMessages:
+        messageUsername = User.query.get(formattedMessage['requesterId'])
+        formattedMessage['username'] = messageUsername.username
+    formattedMessages.sort(key=lambda x: x['createdAt'])
+    foundMeeting['messages'] = formattedMessages
+    return foundMeeting

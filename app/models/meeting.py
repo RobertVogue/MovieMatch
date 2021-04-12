@@ -9,6 +9,13 @@ class Meeting(db.Model):
     active = db.Column(db.Boolean, nullable=False, default=False)
     createdAt = db.Column(db.DateTime,  default=db.func.current_timestamp())
     updatedAt = db.Column(db.DateTime,  default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
-    
+
     message = db.relationship('Message', backref="meetings")
     user = db.relationship('User', backref="meetings")
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'requestedId': self.requestedId,
+            'active': self.active,
+        }

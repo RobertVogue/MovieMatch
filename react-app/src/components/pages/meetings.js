@@ -14,9 +14,18 @@ return (
         </div>
         <div className="MeetingBottomHalf">
             <div className="MeetingLeftSection"></div>
-            <div className="MeetingMiddleSection"></div>
+            <div className="MeetingMiddleSection">
+                <div className="displayMessage">
+                </div>
+                <div className="textArea" id="input_area">
+                    <input type="text" id="user_message" placeholder="Type here..." autoComplete="pff"/>
+                    <button type="button" name="button" id="send_message">Send</button>
+                </div>
+            </div>
             <div className="MeetingRightSection"></div>
         </div>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="{{ url_for('static', filename='scripts/socketio.js') }}"></script>
     </div>
 )
 }

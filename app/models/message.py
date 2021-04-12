@@ -13,3 +13,12 @@ class Message(db.Model):
 
     meeting = db.relationship('Meeting', backref="messages")
     user = db.relationship('User', backref="messages")
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'requesterId': self.requesterId,
+            'meetingId': self.meetingId,
+            'body': self.body,
+            'createdAt': self.createdAt
+        }

@@ -6,7 +6,7 @@
     overflow: hidden;
     background-image: url('../../images/collage.jpg');
     background-size: 200% 200%;
-    animation: scope 300s infinite;
+    animation: scope 1200s infinite;
     animation-direction: normal;
   }
   @keyframes scope {
