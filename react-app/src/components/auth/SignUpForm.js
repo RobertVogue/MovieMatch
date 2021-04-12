@@ -47,7 +47,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   return (
     <div className="Big">
       <div className="signup-form">
-        <form onSubmit={onSignUp}>
+        <form onSubmit={onSignUp} autoComplete="off">
           <h1>MovieMatch</h1>
           <h2>Sign Up</h2>
           <div>
@@ -57,6 +57,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               name="username"
               onChange={updateUsername}
               value={username}
+              autoComplete="off"
             ></input>
           </div>
           <div>
@@ -66,6 +67,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               name="email"
               onChange={updateEmail}
               value={email}
+              autoComplete="off"
             ></input>
           </div>
           <div>
@@ -76,6 +78,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               className="textarea"
               onChange={updateBio}
               value={bio}
+              autoComplete="off"
             ></textarea>
           </div>
           <div>
@@ -85,6 +88,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               name="password"
               onChange={updatePassword}
               value={password}
+              autoComplete="off"
             ></input>
           </div>
           <div>
@@ -95,6 +99,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               onChange={updateRepeatPassword}
               value={repeatPassword}
               required={true}
+              autoComplete="off"
             ></input>
           </div>
           <button type="submit" onSubmit={onSignUp}>Sign Up</button>

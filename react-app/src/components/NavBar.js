@@ -22,6 +22,7 @@ const NavBar = ({ setAuthenticated }) => {
             id="header-search"
             placeholder="Search"
             name="q"
+            autoComplete="off"
           />
           <button className="hidden" type="submit"></button>
         </form>
@@ -37,14 +38,14 @@ const NavBar = ({ setAuthenticated }) => {
         <li>
           <NavLink
             id="ez"
-            to="/friends"
+            to="/friends/Demo"
             exact={true}
           >Friends</NavLink>
         </li>
         <li>
           <NavLink
             id="ez"
-            to="/meetings"
+            to="/meetings/Demo"
             exact={true}
           >Messaging</NavLink>
         </li>

@@ -63,10 +63,10 @@ function App() {
         <ProtectedRoute path="/movies" exact={true} authenticated={authenticated}>
           <Movie />
         </ProtectedRoute>
-        <ProtectedRoute path="/meetings" exact={true} authenticated={authenticated}>
+        <ProtectedRoute path="/meetings/Demo" exact={true} authenticated={authenticated}>
           <Meeting />
         </ProtectedRoute>
-        <ProtectedRoute path="/friends" exact={true} authenticated={authenticated}>
+        <ProtectedRoute path="/friends/Demo" exact={true} authenticated={authenticated}>
           <Friend />
         </ProtectedRoute>
       </Switch>

@@ -53,6 +53,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               placeholder="Email"
               value={email}
               onChange={updateEmail}
+              autoComplete="off"
             />
           </div>
           <div>
@@ -63,6 +64,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               placeholder="Password"
               value={password}
               onChange={updatePassword}
+              autoComplete="off"
             />
             <button type="submit" onSubmit={onLogin}>Login</button>
             <div className="err">

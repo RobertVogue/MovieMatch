@@ -17,7 +17,7 @@ export const socket = io.connect(url, {
 
 
 const MessageContainer = () => {
-    const chatBox = document.querySelector(".chat__messages");
+    const chatBox = document.querySelector(".chatMessages");
     const dispatch = useDispatch();
     const [messageInput, setMessageInput] = useState("");
     const [isLoaded, setIsLoaded] = useState(false);
@@ -68,7 +68,7 @@ const MessageContainer = () => {
     return (
         isLoaded && (
             <div className="everything">
-                <div className="chat__messages">
+                <div className="chatMessages">
                     {meeting.message &&
                         meeting.message.length > 0 &&
                         meeting.message.map((a) => (

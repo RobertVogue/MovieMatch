@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import '../../index.css'
 import MessageContainer from "../containers/messagesContainer"
@@ -7,7 +7,7 @@ import { getAllFriends } from "../../store/friend";
 const Meeting = () => {
     const sessionUser = useSelector((state) => state?.session?.user);
     const dispatch = useDispatch();
-    const friends = useSelector((state) => state?.friend?.friends)
+    const friends = useSelector((state) => state?.friend)
 
     useEffect(() => {
         if (sessionUser) {
@@ -15,6 +15,7 @@ const Meeting = () => {
         }
       }, [dispatch, sessionUser]);
 
+    /* hard coded a little for presentation */
     return (
         <div className="meetingPage">
             <div className="MeetingTopHalf">
@@ -28,7 +29,21 @@ const Meeting = () => {
                             <h1>Friends</h1>
                         </div>
                         <div className="friendList">
-                            {sessionUser?.frienders}
+                            <p>User1</p>
+                            <p>User2</p>
+                            <p>User3</p>
+                            <p>User4</p>
+                            <p>User5</p>
+                            <p>User6</p>
+                            <p>User7</p>
+                            <p>User8</p>
+                            <p>User9</p>
+                            <p>User10</p>
+                            <p>User11</p>
+                            <p>User12</p>
+                            <p>User13</p>
+                            <p>User14</p>
+                            <p>User15</p>
                         </div>
                     </div>
                 </div>
