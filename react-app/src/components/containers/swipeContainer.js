@@ -7,6 +7,16 @@ const base_url = "https://image.tmdb.org/t/p/original/"
 
 const SwipeContainer = ({ fetchUrl }) => {
     const [movie, setMovies] = useState([]);
+    const [badList, setBadList] = useState([]);
+    const [goodList, setGoodList] = useState([]);
+
+    const onSwipe = (direction) => {
+        const swipeRight = direction === "right" ? true : false;
+        const swipeLeft = direction === "left" ? true : false;
+
+        if (swipeRight) return setGoodList(...goodList)
+        if (swipeLeft) return setBadList(...badList)
+    }
     // const [movie, setSingle] = useState("");
     // const [list, setList] = useState([])
     // const onSwipe = (direction) => {
@@ -39,6 +49,7 @@ const SwipeContainer = ({ fetchUrl }) => {
                     <TinderCard
                         className="swipeCard"
                         key={mov.id}
+                        onSwipe={(dir) => onSwipe(dir, mov.id)}
                         preventSwipe={['up', 'down']}>
                         <div style={{ backgroundImage: `url(${base_url}${mov.poster_path})`}}
                         className="cardItself"
