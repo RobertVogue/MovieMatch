@@ -8,7 +8,6 @@ import Footer from "./components/FootBar";
 import Friend from "./components/pages/friends";
 import Home from "./components/pages/home";
 import Movie from "./components/pages/movies";
-import Profile from "./components/pages/profile";
 import Meeting from "./components/pages/meetings";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/auth";

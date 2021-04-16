@@ -176,7 +176,7 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    margin-top: 330px;
+    margin-top: 130px;
     width: 100%;
     height: 780px;
 }
@@ -205,14 +205,13 @@
 
 }
 .swipeCard {
-    margin-top: 25px;
+    position: absolute;
 }
 .swipeDetails {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
-    width: 400px;
-    height: 570px;
+    margin-top: 25px;
 }
 .swipeTitle {
     display: none;
@@ -231,15 +230,31 @@
 .swipeSyn {
     display: none;
     color: black;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
     font-weight: bolder;
     text-decoration: none;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    width: 300px;
-    max-height: 350px;
+    width: 460px;
+    max-height: 400px;
     overflow-y: hidden;
     transform: translate(-50%, -50%);
+}
+.descr {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    border-radius: 10px;
+    height: 30px;
+    width: 140px;
+    background-color: black;
+    position: absolute;
+    top: 90%;
+    left: 40%;
 }
 .moviePage {
     width: 100.9%;
@@ -345,25 +360,30 @@
     cursor: pointer;
     transform: scale(.9);
     backface-visibility: hidden;
-
+}
+.cardItself {
+    position: relative;
+    min-width: 460px;
+    max-width: 460px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 700px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 20px 15px 0px rgba(0, 0, 0, 0.325);
 }
 
-.swipeDetails:hover .row_poster3 {
-    opacity: 0.3;
-}
+
 .swipeDetails:active .row_poster3 {
     opacity: 1;
 }
 
-.swipeDetails:hover .swipeTitle {
+
+.descr:hover ~ .swipeSyn {
     display: block;
 }
-.swipeDetails:hover .swipeSyn {
-    display: block;
-}
-.swipeDetails:active .swipeTitle {
-    display: none;
-}
+
 .swipeDetails:active .swipeSyn {
     display: none;
 }

@@ -14,9 +14,6 @@ const Home = () => {
 
 return (
     <div className="homePage">
-        <div className="HomeTopHalf">
-        <Row title="" fetchUrl={requests.fetchEmAll}/>
-        </div>
         <div className="HomeBottomHalf">
             <div className="HomeLeftSection">
                 <FriendsContainer />
