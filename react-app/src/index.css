@@ -375,12 +375,11 @@
 }
 
 .meetingPage {
-    width: 100.9%;
+    width: 100%;
     height: 981px;
     display: flex;
     flex-direction: column;
-    margin-left: -10px;
-    background-color: rgb(102, 102, 102);
+
 }
 .MeetingTopHalf {
     width: 100%;
