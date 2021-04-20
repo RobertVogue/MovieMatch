@@ -19,7 +19,7 @@ return (
                 <FriendsContainer />
             </div>
             <div className="HomeMiddleSection">
-                <SwipeContainer fetchUrl={requests.fetchEmAll}/>
+                <SwipeContainer fetchUrl={requests.fetchEmAll} fetchUrl2={requests.fetch1}/>
             </div>
             <div className="HomeRightSection"></div>
         </div>

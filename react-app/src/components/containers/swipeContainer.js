@@ -5,20 +5,29 @@ import "../../index.css"
 
 const base_url = "https://image.tmdb.org/t/p/original/"
 
-const SwipeContainer = ({ fetchUrl }) => {
+const SwipeContainer = ({ fetchUrl, fetchUrl2 }) => {
     const [movie, setMovies] = useState([]);
+    const [movie2, setMovies2] = useState([]);
     const goodList = [];
     const badList = [];
+    const count = [];
 
     const onSwipe = (direction, path) => {
+
         const swipeRight = direction === "right" ? true : false;
         const swipeLeft = direction === "left" ? true : false;
-        if (swipeRight) {
-            goodList.push(path)
-            console.log(goodList)
+        if (count.length === 19) {
+            setMovies(badList)
         }
-        if (swipeLeft) {
+        else if (swipeRight) {
+            count.push("right")
+            goodList.push(path)
+            console.log(goodList, count)
+        }
+        else if (swipeLeft) {
+            count.push("left")
             badList.push(path)
+            console.log(badList, count)
         }
 
     }
@@ -41,7 +50,19 @@ const SwipeContainer = ({ fetchUrl }) => {
     useEffect(() => {
             async function fetchData() {
             const request = await axios.get(fetchUrl);
+            const request2 = await axios.get(fetchUrl2);
+            // const request3 = await axios.get(fetchUrl);
+            // const request4 = await axios.get(fetchUrl);
+            // const request5 = await axios.get(fetchUrl);
+            // const request6 = await axios.get(fetchUrl);
+            // const request7 = await axios.get(fetchUrl);
+            // const request8 = await axios.get(fetchUrl);
+            // const request9 = await axios.get(fetchUrl);
+            // const request10 = await axios.get(fetchUrl);
+            // const request11 = await axios.get(fetchUrl);
+            // const request12 = await axios.get(fetchUrl);
             setMovies(request.data.results);
+            setMovies2(request2.data.results)
         }
         fetchData();
     }, [])
