@@ -40,7 +40,7 @@ export const findMeetings = (meetingId) => async (dispatch) => {
 const initialState = {};
 const meetingReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FIND_MEETING:
+        case ADD_MEETING:
             return action.newMeeting;
         case FIND_MEETING:
             return { ...action.meeting };

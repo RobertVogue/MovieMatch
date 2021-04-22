@@ -7,7 +7,6 @@ import { getAllFriends } from "../../store/friend";
 const Meeting = () => {
     const sessionUser = useSelector((state) => state?.session?.user);
     const dispatch = useDispatch();
-    const friends = useSelector((state) => state?.friend)
 
     useEffect(() => {
         if (sessionUser) {

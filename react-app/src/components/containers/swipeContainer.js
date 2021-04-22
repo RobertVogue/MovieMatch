@@ -5,28 +5,36 @@ import "../../index.css"
 
 const base_url = "https://image.tmdb.org/t/p/original/"
 
-const SwipeContainer = ({ fetchUrl, fetchUrl2 }) => {
+const SwipeContainer = ({ fetchUrl, fetchUrl2, fetchUrl3 }) => {
     const [movie, setMovies] = useState([]);
-    const [movie2, setMovies2] = useState([]);
     const goodList = [];
     const badList = [];
     const count = [];
+    const counter = [];
 
-    const onSwipe = (direction, path) => {
 
+    const onSwipe = async (direction, mov) => {
         const swipeRight = direction === "right" ? true : false;
         const swipeLeft = direction === "left" ? true : false;
+        const request2 = await axios.get(fetchUrl2)
+        const request3 = await axios.get(fetchUrl3)
         if (count.length === 19) {
-            setMovies(badList)
+            counter.push("done")
+            if(counter.length===1){
+                return setMovies(request2.data.results)
+            }
+            if(counter.length===2){
+                return setMovies(request3.data.results)
+            }
         }
         else if (swipeRight) {
             count.push("right")
-            goodList.push(path)
+            goodList.push(mov)
             console.log(goodList, count)
         }
         else if (swipeLeft) {
             count.push("left")
-            badList.push(path)
+            badList.push(mov)
             console.log(badList, count)
         }
 
@@ -50,7 +58,6 @@ const SwipeContainer = ({ fetchUrl, fetchUrl2 }) => {
     useEffect(() => {
             async function fetchData() {
             const request = await axios.get(fetchUrl);
-            const request2 = await axios.get(fetchUrl2);
             // const request3 = await axios.get(fetchUrl);
             // const request4 = await axios.get(fetchUrl);
             // const request5 = await axios.get(fetchUrl);
@@ -62,10 +69,10 @@ const SwipeContainer = ({ fetchUrl, fetchUrl2 }) => {
             // const request11 = await axios.get(fetchUrl);
             // const request12 = await axios.get(fetchUrl);
             setMovies(request.data.results);
-            setMovies2(request2.data.results)
+
         }
         fetchData();
-    }, [])
+    }, [fetchUrl])
 
     return (
         <div className="swipeDetails">
@@ -73,7 +80,7 @@ const SwipeContainer = ({ fetchUrl, fetchUrl2 }) => {
                     <TinderCard
                         className="swipeCard"
                         key={mov.id}
-                        onSwipe={(dir) => onSwipe(dir, mov.poster_path)}
+                        onSwipe={(dir) => onSwipe(dir, mov)}
                         preventSwipe={['up', 'down']}>
                         <div style={{ backgroundImage: `url(${base_url}${mov.poster_path})`}}
                         className="cardItself"

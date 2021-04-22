@@ -2,10 +2,14 @@ import React from "react";
 import '../../index.css'
 import requests from "../../requests";
 import Row from '../additional/Movie'
+import Banner from '../additional/Banner'
 
 const Movie = () => {
   return (
       <div className="moviePage">
+        <div className="MovieTopHalf">
+          <Banner fetchUrl={requests.fetchTrending}/>
+        </div>
         <div className="MovieBottomHalf">
             <div className="MovieLeftSection"></div>
             <div className="MovieMiddleSection">

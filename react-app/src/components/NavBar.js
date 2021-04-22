@@ -1,11 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import "../index.css"
 
 const NavBar = ({ setAuthenticated }) => {
-  const sessionUser = useSelector((state) => state?.session?.user);
   return (
     <nav className="liner">
       <ul id="space"></ul>
@@ -23,6 +21,13 @@ const NavBar = ({ setAuthenticated }) => {
             to="/meetings/Demo"
             exact={true}
           >Messaging</NavLink>
+        </li>
+        <li>
+          <NavLink
+            id="ez5"
+            to="/"
+            exact={true}
+          >Matches</NavLink>
         </li>
       </ul>
       <ul id="nav2">

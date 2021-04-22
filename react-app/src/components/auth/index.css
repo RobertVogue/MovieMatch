@@ -4,20 +4,8 @@
     justify-content: space-around;
     height: 98vh;
     overflow: hidden;
-    background-image: url('../../images/collage.jpg');
-    background-size: 200% 200%;
-    animation: scope 1200s infinite;
-    animation-direction: normal;
   }
-  @keyframes scope {
-    0% {
-      background-position: 0% 0%;
-    }
 
-    60% {
-      background-position: 300% 400%;
-    }
-  }
   .err {
     color: red;
     font-weight: bolder;

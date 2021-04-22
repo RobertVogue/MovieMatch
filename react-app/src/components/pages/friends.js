@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import '../../index.css'
 import requests from "../../requests";
 import Row2 from '../additional/Movie4Friends';
