@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import '../../index.css'
 import MessageContainer from "../containers/messagesContainer"
 import { getAllFriends } from "../../store/friend";
+import SideBar from "../additional/Sidebar"
 
 const Meeting = () => {
     const sessionUser = useSelector((state) => state?.session?.user);
@@ -24,12 +25,7 @@ const Meeting = () => {
             <div className="MeetingBottomHalf">
                 <div className="MeetingLeftSection">
                     <div className="friends">
-                        <div className="small">
-                            <h1>Rooms</h1>
-                        </div>
-                        <div className="friendList">
-                           
-                        </div>
+                        <SideBar />
                     </div>
                 </div>
                 <div className="MeetingMiddleSection">

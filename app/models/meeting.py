@@ -6,7 +6,7 @@ class Meeting(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     requestedId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    active = db.Column(db.Boolean, nullable=False, default=False)
+    name = db.Column(db.String(40), nullable=False)
     createdAt = db.Column(db.DateTime,  default=db.func.current_timestamp())
     updatedAt = db.Column(db.DateTime,  default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
 
@@ -17,5 +17,5 @@ class Meeting(db.Model):
         return {
             'id': self.id,
             'requestedId': self.requestedId,
-            'active': self.active,
+            'name': self.name,
         }

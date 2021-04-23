@@ -5,6 +5,7 @@ import { findMeetings } from "../../store/meeting"
 import "../../index.css"
 import io from "socket.io-client";
 import createNewMessage from "../../store/messages";
+import {Avatar} from "@material-ui/core"
 
 const url =
     process.env.NODE_ENV === "development"
@@ -68,21 +69,23 @@ const MessageContainer = () => {
     return (
         isLoaded && (
             <div className="everything">
+                <div className="chatheader">
+                    <Avatar />
+                    <div className="headinfo">
+                    <h3>Room Name</h3>
+                    <p>last seen at...</p>
+                    </div>
+
+                </div>
                 <div className="chatMessages">
-                    {meeting.message &&
-                        meeting.message.length > 0 &&
-                        meeting.message.map((a) => (
-                            <div className="messageBox4">
-                                <div className="messageBody">
-                                    <p className="messageUser">{a.username}</p>
-                                    <p className="messageBody">{a.body}</p>
-                                    <button className="inputButton" type="submit">
-                                    Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        ))
-                    }
+                    <p className={`chatmessage ${true && "chatreceive"}`}>
+                    <span className="chatname">Bo</span>
+                    Hey Guys
+                    <span className="time">
+                        5:07pm
+                    </span>
+                    </p>
+                    <p className="chatmessage">Hey Guys</p>
                 </div>
                 <div className="messageInputs">
                 <form onSubmit={(e) => handleNewMessage(e)}>
