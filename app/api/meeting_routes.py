@@ -9,6 +9,7 @@ meeting_routes = Blueprint('meetings', __name__)
 def add_meeting():
     meeting = request.json
     new_meeting = Meeting(
+        name=meeting['name'],
         requestedId = meeting['requestedId'],
         createdAt = db.func.current_timestamp()
     )
@@ -24,6 +25,7 @@ def grab_meeting():
     helper = Meeting.query.get(meetingId)
     meeting = Meeting(
         id = helper.id,
+        name=helper.name,
         requestedId = helper.requestedId
     )
 
