@@ -1,7 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import sessionReducer from "./auth";
-import postReducer from "./poster"
 import friendReducer from "./friend"
 import meetingReducer from "./meeting";
 import messageReducer from "./message";
@@ -9,7 +8,6 @@ import messageReducer from "./message";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  posts: postReducer,
   friends: friendReducer,
   meeting: meetingReducer,
   message: messageReducer,
