@@ -20,7 +20,7 @@ function Banner({ fetchUrl }) {
         style={{
             backgroundImage: `url("${base_url}${movie?.backdrop_path}")`,
             backgroundSize: "cover",
-            backgroundPosition: "center center",
+            backgroundPosition: "200% 200%",
         }}
         >
             <div className="bannerinner">

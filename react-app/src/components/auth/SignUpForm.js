@@ -48,8 +48,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     <div className="Big">
       <div className="signup-form">
         <form onSubmit={onSignUp} autoComplete="off">
-          <h1>MovieMatch</h1>
-          <h2>Sign Up</h2>
+          <h1>Sign Up</h1>
           <div>
             <label>User Name</label>
             <input
@@ -113,6 +112,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
           </div>
         </div>
       </div>
+      <div className="logggo"></div>
     </div>
   );
 };

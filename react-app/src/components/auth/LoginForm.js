@@ -43,8 +43,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     <div className="Big">
       <div className="login-form">
         <form onSubmit={onLogin}>
-          <h1>MovieMatch</h1>
-          <h2>Login</h2>
+          <h1>Login</h1>
           <div>
             <label htmlFor="email">Email</label>
             <input
@@ -90,6 +89,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           </div>
         </div>
       </div>
+      <div className="logggo"></div>
     </div>
   );
 };

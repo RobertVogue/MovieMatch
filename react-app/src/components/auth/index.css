@@ -1,9 +1,14 @@
   .Big {
     display: flex;
-    width: 100%;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    width: 101%;
+    margin-left: -10px;
     justify-content: space-around;
-    height: 98vh;
-    overflow: hidden;
+    height: 101vh;
+    overflow-x: hidden;
+    background-color: #111;
   }
 
   .err {
@@ -13,11 +18,12 @@
     margin-left: 43px;
   }
   .login-form {
+    position: fixed;
     background-color: white;
     margin-top: 150px;
     margin-bottom: 500px;
     margin-left: 0;
-    height: 500px;
+    height: 380px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -65,12 +71,19 @@
   .signUp {
     color: rgb(187, 84, 0);
   }
+  .logggo {
+    margin-top: 700px;
+    width: 300px;
+    height: 150px;
+    background-image: url('../../images/logggo.png');
+  }
   .signup-form {
+    position: fixed;
     background-color: white;
-    margin-top: 100px;
+    margin-top: 300px;
     margin-bottom: 500px;
     margin-left: 0;
-    height: 700px;
+    height: 600px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
