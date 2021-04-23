@@ -6,6 +6,8 @@ import "../../index.css"
 import io from "socket.io-client";
 import createNewMessage from "../../store/messages";
 import {Avatar} from "@material-ui/core"
+import Row2 from '../additional/Movie4Friends'
+import requests from "../../requests";
 
 const url =
     process.env.NODE_ENV === "development"
@@ -70,22 +72,30 @@ const MessageContainer = () => {
         isLoaded && (
             <div className="everything">
                 <div className="chatheader">
-                    <Avatar />
+                    <Avatar src={`https://avatars.dicebear.com/api/human/700.svg`}/>
                     <div className="headinfo">
-                    <h3>Room Name</h3>
-                    <p>last seen at...</p>
+                        <h3>user2</h3>
+                        <p className="grey">Last seen at... 8:10pm</p>
+                        <p className="green">Match: 86%</p>
+                    </div>
+                    <div className="chatmovies">
+                        <Row2 fetchUrl={requests.fetch12}/>
                     </div>
 
                 </div>
                 <div className="chatMessages">
+                    <p className="chatmessage"><span className="chatname">user2</span>
+                    Hey Everyone, glad you're here!</p>
                     <p className={`chatmessage ${true && "chatreceive"}`}>
                     <span className="chatname">Bo</span>
-                    Hey Guys
+                    Thanks!
                     <span className="time">
                         5:07pm
                     </span>
                     </p>
-                    <p className="chatmessage">Hey Guys</p>
+                    <p className="chatmessage">
+                    <span className="chatname">user2</span>
+                    Looks like we have a match!</p>
                 </div>
                 <div className="messageInputs">
                 <form onSubmit={(e) => handleNewMessage(e)}>

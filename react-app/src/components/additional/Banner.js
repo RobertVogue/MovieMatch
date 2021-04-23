@@ -25,9 +25,6 @@ function Banner({ fetchUrl }) {
         >
             <div className="bannerinner">
                 <h1 className="bannerTitle">{movie?.title || movie?.name || movie.original_name}</h1>
-                <div className="bannerButtons">
-                    <button className="bannerButt">Add to Likes</button>
-                </div>
                 <h1 className="bannerSyn">{movie?.overview}</h1>
             </div>
 

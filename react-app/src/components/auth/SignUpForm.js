@@ -6,14 +6,13 @@ import './index.css'
 const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
 
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const user = await signUp(username, email, bio, password);
+      const user = await signUp(username, email, password);
       if (!user.errors) {
         setAuthenticated(true);
       }
@@ -28,10 +27,6 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     setEmail(e.target.value);
   };
 
-  const updateBio = (e) => {
-    setBio(e.target.value);
-  };
-
   const updatePassword = (e) => {
     setPassword(e.target.value);
   };
@@ -41,7 +36,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   };
 
   if (authenticated) {
-    return <Redirect to="/" />;
+    return <Redirect to="/movies/" />;
   }
 
   return (
@@ -50,7 +45,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
         <form onSubmit={onSignUp} autoComplete="off">
           <h1>Sign Up</h1>
           <div>
-            <label>User Name</label>
+            <label>Username</label>
             <input
               type="text"
               name="username"
@@ -68,17 +63,6 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               value={email}
               autoComplete="off"
             ></input>
-          </div>
-          <div>
-            <label>Bio</label>
-            <textarea
-              type="text"
-              name="bio"
-              className="textarea"
-              onChange={updateBio}
-              value={bio}
-              autoComplete="off"
-            ></textarea>
           </div>
           <div>
             <label>Password</label>

@@ -18,7 +18,7 @@ const NavBar = ({ setAuthenticated }) => {
         <li>
           <NavLink
             id="ez"
-            to="/meetings/Demo"
+            to="/meetings/"
             exact={true}
           >Messaging</NavLink>
         </li>

@@ -5,7 +5,6 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
 import Footer from "./components/FootBar";
-import Friend from "./components/pages/friends";
 import Home from "./components/pages/home";
 import Movie from "./components/pages/movies";
 import Meeting from "./components/pages/meetings";
@@ -62,11 +61,8 @@ function App() {
         <ProtectedRoute path="/movies" exact={true} authenticated={authenticated}>
           <Movie />
         </ProtectedRoute>
-        <ProtectedRoute path="/meetings/Demo" exact={true} authenticated={authenticated}>
+        <ProtectedRoute path="/meetings/" exact={true} authenticated={authenticated}>
           <Meeting />
-        </ProtectedRoute>
-        <ProtectedRoute path="/friends/Demo" exact={true} authenticated={authenticated}>
-          <Friend />
         </ProtectedRoute>
       </Switch>
       {authenticated && (
