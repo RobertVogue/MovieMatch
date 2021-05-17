@@ -6,10 +6,10 @@ function SideChats({ addNewChat }) {
 
 
     const createChat = () => {
-        const roomName = prompt("enter name");
+        const roomName = prompt("Enter Name");
 
         if (roomName) {
-            // coming back
+            // coming back Need to fix.
         }
     };
 
