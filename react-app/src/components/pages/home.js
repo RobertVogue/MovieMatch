@@ -19,7 +19,7 @@ return (
 
             </div>
             <div className="HomeMiddleSection">
-                <SwipeContainer fetchUrl={requests.fetchEmAll} fetchUrl2={requests.fetch1} fetchUrl3={requests.fetch2}/>
+                <SwipeContainer fetchUrl1={requests.fetch1} fetchUrl2={requests.fetch2} fetchUrl3={requests.fetch3} fetchUrl4={requests.fetch4} fetchUrl5={requests.fetch5} fetchUrl6={requests.fetch6} fetchUrl7={requests.fetch7} fetchUrl8={requests.fetch8} fetchUrl9={requests.fetch9} fetchUrl10={requests.fetch10} fetchUrl11={requests.fetch11} fetchUrl12={requests.fetch12} fetchUrl13={requests.fetch13} fetchUrl14={requests.fetch14} fetchUrl15={requests.fetch15}/>
             </div>
             <div className="HomeRightSection"></div>
         </div>
