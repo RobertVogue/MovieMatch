@@ -22,6 +22,7 @@ class User(db.Model, UserMixin):
   updatedAt = db.Column(db.DateTime,  default=db.func.current_timestamp(),onupdate=db.func.current_timestamp())
 
 
+  userMovie = db.relationship('UserMovie', backref="users")
   frienders = db.relationship(
       "User",
       secondary=friends,

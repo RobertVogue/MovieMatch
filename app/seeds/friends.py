@@ -4,7 +4,7 @@ def seed_friends():
     users = User.query.all()
     user = users[0]
 
-    for i in range(2, 50):
+    for i in range(1, 50):
         user.frienders.append(users[i])
 
     db.session.commit()

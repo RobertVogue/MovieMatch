@@ -1,8 +1,8 @@
-"""new movie table
+"""updates to movies
 
-Revision ID: 930d82cae475
+Revision ID: 0b20d9987592
 Revises: 
-Create Date: 2021-05-17 13:59:50.080834
+Create Date: 2021-05-19 10:50:47.305825
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '930d82cae475'
+revision = '0b20d9987592'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,8 +22,16 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('movieId', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(), nullable=False),
-    sa.Column('listType', sa.String(), nullable=False),
     sa.Column('synopsis', sa.Text(), nullable=False),
+    sa.Column('movieArt', sa.Text(), nullable=False),
+    sa.Column('createdAt', sa.DateTime(), nullable=True),
+    sa.Column('updatedAt', sa.DateTime(), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('userMovies',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('userId', sa.Integer(), nullable=False),
+    sa.Column('movieId', sa.Integer(), nullable=False),
     sa.Column('movieArt', sa.Text(), nullable=False),
     sa.Column('createdAt', sa.DateTime(), nullable=True),
     sa.Column('updatedAt', sa.DateTime(), nullable=True),
@@ -88,5 +96,6 @@ def downgrade():
     op.drop_table('meetings')
     op.drop_table('friends')
     op.drop_table('users')
+    op.drop_table('userMovies')
     op.drop_table('movies')
     # ### end Alembic commands ###

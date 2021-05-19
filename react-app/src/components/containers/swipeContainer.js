@@ -171,7 +171,7 @@ const SwipeContainer = ({ fetchUrl1, fetchUrl2, fetchUrl3}) => {
                     <TinderCard
                         className="swipeCard"
                         key={mov.id}
-                        onSwipe={(dir) => onSwipe(dir, mov.id)}
+                        onSwipe={(dir) => onSwipe(dir, mov)}
                         preventSwipe={['up', 'down']}>
                         <div style={{ backgroundImage: `url(${base_url}${mov.poster_path})`}}
                         className="cardItself"

@@ -11,6 +11,15 @@ def seed_users():
 
     db.session.add(demo)
 
+
+    demo2 = User(username='Admin', email='admin@aa.io',
+                bio='I am Demo\'s Friend',
+                password='password')
+
+
+    db.session.add(demo2)
+
+
     numberList = [
         "1",
         "2",
