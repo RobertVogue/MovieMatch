@@ -9,38 +9,38 @@ Tinder Portion - Fully Swipable with auto refresh of new cards, List creation in
 WhatApp Portion - Platform Stable, Rooms not pairing with users, Messaging currently not sending
 
 
-#Features
-##1. Login Page with preconfigured Demo user Login and Easy Sign Up Link
+# Features
+## 1. Login Page with preconfigured Demo user Login and Easy Sign Up Link
 
 <p align="center">
   <img src="Readme-Assets/loginpage.png">
 </p>
 
-##2. Netflix Inspired Discover Page
+## . Netflix Inspired Discover Page
 
 <p align="center">
   <img src="Readme-Assets/netflixportion.png">
 </p>
 
-##3. Clickable Movies for Instant Trailers (click movie again to end & hide display)
+## 3. Clickable Movies for Instant Trailers (click movie again to end & hide display)
 
 <p align="center">
   <img src="Readme-Assets/trailer.png">
 </p>
 
-##4. Tinder Inspired Cards to swipe movies you like and dislike
+## 4. Tinder Inspired Cards to swipe movies you like and dislike
 
 <p align="center">
   <img src="Readme-Assets/Card.png">
 </p>
 
-##5. Tinder-like animation effects on swipe
+## 5. Tinder-like animation effects on swipe
 
 <p align="center">
   <img src="Readme-Assets/swiper.png">
 </p>
 
-##6. Whatsapp Inspired Messaging using SocketIO-flask
+## 6. Whatsapp Inspired Messaging using SocketIO-flask
 
 <p align="center">
   <img src="Readme-Assets/messaging.png">
