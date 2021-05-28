@@ -3,7 +3,9 @@
 MovieMatch is a fusion between Netflix, Tinder, and Whatapp. When you are in the mood to watch a movie with a friend or group. Instead of endlessly browsing, match a movie and skip the headache. The platform has a "discover movie page" this is the Netflix portion. Each movie is clickable to display the movie's trailer. Each user has a personal "list" of movie they want to watch by swiping movie cards. This really gives the Tinder feel. All the platform has to do is match arrays between users to find which movies "match." If you aren't with your friends, you can use the optional messaging feature to talk real time with your friends.
 
 Netflix Portion - Live & Working
+
 Tinder Portion - Fully Swipable with auto refresh of new cards, List creation in Progress
+
 WhatApp Portion - Platform Stable, Rooms not pairing with users, Messaging currently not sending
 
 ## Getting started
