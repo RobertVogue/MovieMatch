@@ -8,15 +8,15 @@ meeting_routes = Blueprint('meetings', __name__)
 @meeting_routes.route('/', methods=['POST'])
 def add_meeting():
     meeting = request.json
-    new_meeting = Meeting(
+    newMeeting = Meeting(
         name=meeting['name'],
-        requestedId = meeting['requestedId'],
+        userId = meeting['userId'],
         createdAt = db.func.current_timestamp()
     )
 
-    db.session.add(new_meeting)
+    db.session.add(newMeeting)
     db.session.commit()
-    return new_meeting.to_dict()
+    return newMeeting.to_dict()
 
 
 @meeting_routes.route('/', methods=['PUT'])
@@ -26,16 +26,34 @@ def grab_meeting():
     meeting = Meeting(
         id = helper.id,
         name=helper.name,
-        requestedId = helper.requestedId
+        userId = helper.userId
     )
 
     foundMeeting = meeting.to_dict()
     formattedMessages = [mess.to_dict() for
-                         mess in helper.message]
+                         mess in helper.messages]
 
     for formattedMessage in formattedMessages:
-        messageUsername = User.query.get(formattedMessage['requesterId'])
+        messageUsername = User.query.get(formattedMessage['userId'])
         formattedMessage['username'] = messageUsername.username
     formattedMessages.sort(key=lambda x: x['createdAt'])
     foundMeeting['messages'] = formattedMessages
     return foundMeeting
+
+
+@meeting_routes.route('/', methods={'PUT'})
+def editMeeting():
+    meeting = request.json
+    found = Meeting.query.get(meeting['meetingId'])
+    found.name = meeting['newName']
+    db.session.commit()
+    return found.to_dict()
+
+
+@meeting_routes.route('/', methods=['DELETE'])
+def deleteMeeting():
+    meeting = request.json
+    room = Meeting.query.get(meeting)
+    db.session.delete(room)
+    db.session.commit()
+    return room.to_dict()

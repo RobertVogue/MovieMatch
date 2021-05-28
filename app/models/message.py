@@ -5,7 +5,7 @@ class Message(db.Model):
     __tablename__ = 'messages'
 
     id = db.Column(db.Integer, primary_key=True)
-    requesterId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     meetingId = db.Column(db.Integer, db.ForeignKey('meetings.id'), nullable=False)
     body = db.Column(db.Text, nullable=False)
     createdAt = db.Column(db.DateTime,  default=db.func.current_timestamp())
@@ -17,7 +17,7 @@ class Message(db.Model):
     def to_dict(self):
         return {
             'id': self.id,
-            'requesterId': self.requesterId,
+            'userId': self.userId,
             'meetingId': self.meetingId,
             'body': self.body,
             'createdAt': self.createdAt

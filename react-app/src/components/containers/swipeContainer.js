@@ -6,10 +6,15 @@ import "../../index.css"
 const base_url = "https://image.tmdb.org/t/p/original/"
 
 const SwipeContainer = ({ fetchUrl1, fetchUrl2, fetchUrl3}) => {
+
+    let movieId;
+    let userId;
+
     // , fetchUrl4, fetchUrl5, fetchUrl6, fetchUrl7, fetchUrl8, fetchUrl9, fetchUrl10, fetchUrl11, fetchUrl12, fetchUrl13, fetchUrl14, fetchUrl15
     const [movie, setMovies] = useState([]);
     const [movie2, setMovies2] = useState([]);
     const [movie3, setMovies3] = useState([]);
+    const [info, setInfo] = useState('');
     // More Movies work. But super SLOW.
     // const [movie4, setMovies4] = useState([]);
     // const [movie5, setMovies5] = useState([]);
@@ -36,8 +41,19 @@ const SwipeContainer = ({ fetchUrl1, fetchUrl2, fetchUrl3}) => {
         const swipeLeft = direction === "left" ? true : false;
 
         if (swipeRight) {
-            goodList.push(mov)
-            console.log(goodList)
+            let id = JSON.parse(localStorage.user).id
+            const res = await fetch(`/api/users/${id}/swipe/${movieId}`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    userId: userId, movieId: movieId
+                }),
+                headers: {
+                    "content-type": "application/json"
+                }
+            })
+            return await res.json()
+            // goodList.push(mov)
+            // console.log(goodList)
         }
         else if (swipeLeft) {
             badList.push(mov)
