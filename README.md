@@ -16,7 +16,7 @@ WhatApp Portion - Platform Stable, Rooms not pairing with users, Messaging curre
   <img src="Readme-Assets/loginpage.png">
 </p>
 
-## . Netflix Inspired Discover Page
+## 2. Netflix Inspired Discover Page
 
 <p align="center">
   <img src="Readme-Assets/netflixportion.png">
