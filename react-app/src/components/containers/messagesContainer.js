@@ -95,7 +95,7 @@ const MessageContainer = () => {
                     </p>
                     <p className="chatmessage">
                     <span className="chatname">user2</span>
-                    Looks like we have a match!</p>
+                    Messaging Currently Offline. Please Try Again later!</p>
                 </div>
                 <div className="messageInputs">
                 <form onSubmit={(e) => handleNewMessage(e)}>
