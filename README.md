@@ -9,66 +9,50 @@ Tinder Portion - Fully Swipable with auto refresh of new cards, List creation in
 WhatApp Portion - Platform Stable, Rooms not pairing with users, Messaging currently not sending
 
 
-#Features
-##1. Login Page with preconfigured Demo user Login and Easy Sign Up Link
+# Features
+## 1. Login Page with preconfigured Demo user Login and Easy Sign Up Link
 
+<p align="center">
+  <img src="Readme-Assets/loginpage.png">
+</p>
 
-##2. Netflix Inspired Discover Page
+## 2. Netflix Inspired Discover Page
 
+<p align="center">
+  <img src="Readme-Assets/netflixportion.png">
+</p>
 
-##3. Clickable Movies for Instant Trailers (click movie again to end & hide display)
+## 3. Clickable Movies for Instant Trailers (click movie again to end & hide display)
 
+<p align="center">
+  <img src="Readme-Assets/trailer.png">
+</p>
 
-##4. Tinder Inspired Cards to swipe movies you like and dislike
+## 4. Tinder Inspired Cards to swipe movies you like and dislike
 
+<p align="center">
+  <img src="Readme-Assets/Card.png">
+</p>
 
-##5. Tinder-like animation effects on swipe
+## 5. Tinder-like animation effects on swipe
 
+<p align="center">
+  <img src="Readme-Assets/swiper.png">
+</p>
 
-##6. Whatsapp Inspired Messaging using SocketIO-flask
+## 6. Whatsapp Inspired Messaging using SocketIO-flask
 
+<p align="center">
+  <img src="Readme-Assets/messaging.png">
+</p>
 
+# Obstacles
 
+Trying to implement socket channels for users instead of servers.
 
+Taking API data and transferring it into usable arrays for users that do not dissapear on site refresh.
 
+# Conclusion
 
-
-
-## Getting started
-
-1. Clone this repository (only this branch)
-
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
-
-2. Install dependencies
-
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
-
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
-
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
-
-   ```bash
-   pipenv shell
-   ```
-
-   ```bash
-   flask db upgrade
-   ```
-
-   ```bash
-   flask seed all
-   ```
-
-   ```bash
-   flask run
-   ```
-
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+Overall, I am content with how the project turned out in a just a few weeks. There is definitely a learning curve when using websockets and I am happy to be able to keep working on it. My favorite feature is the swipable cards. I ran into so many issues with the cards not rendering properly, and having a clean finished product is very satisfying. I enjoyed working with React/Redux and my skills are defeinitely improving. 
 
