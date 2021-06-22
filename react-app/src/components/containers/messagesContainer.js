@@ -18,8 +18,6 @@ export const socket = io.connect(url, {
     secure: true,
 });
 
-// Sockets currently Broken. Basic Text below for read-use only.
-
 const MessageContainer = () => {
     const chatBox = document.querySelector(".chatMessages");
     const dispatch = useDispatch();
