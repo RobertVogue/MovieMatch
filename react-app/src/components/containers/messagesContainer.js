@@ -74,12 +74,8 @@ const MessageContainer = () => {
                     <Avatar src={`https://avatars.dicebear.com/api/human/700.svg`}/>
                     <div className="headinfo">
                         <h3>user2</h3>
-                        <p className="grey">Last seen at... 8:10pm</p>
-                        <p className="green">Match: 86%</p>
                     </div>
-                    <div className="chatmovies">
-                        <Row2 fetchUrl={requests.fetch12}/>
-                    </div>
+
 
                 </div>
                 <div className="chatMessages">

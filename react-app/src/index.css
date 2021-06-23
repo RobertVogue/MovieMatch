@@ -163,7 +163,7 @@
     margin-top: 90px;
     margin-left: -10px;
     width: 100.1%;
-    height: 980px;
+    height: 1010px;
     color: black;
     background-color: #111;
 }
@@ -408,7 +408,7 @@
 
 .meetingPage {
     width: 101%;
-    height: 981px;
+    height: 1100px;
     margin-left: -10px;
     display: flex;
     flex-direction: column;
@@ -687,15 +687,18 @@
 .chatmovies {
     width: 900px;
 }
-.scrollbox > p {
+.genrebox > p {
     color: white;
     margin-right: 10px;
 }
-.scrollbox > p:hover {
+.genrebox > p:hover {
     transition: 1s;
     font-size: 19px;
 }
-.scrollbox {
+.genrebox {
     display: flex;
     margin-top: 800px;
+}
+.minimatch {
+    color: white;
 }

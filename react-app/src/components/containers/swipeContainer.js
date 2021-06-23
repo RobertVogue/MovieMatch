@@ -286,9 +286,10 @@ const SwipeContainer = ({ fetchUrl1, fetchUrl2, fetchUrl3, fetchUrl4, fetchUrl5,
                             </div>
                         </div>
                     </TinderCard>
+
                 ))}
-                <div className="minimatch">Trending Movies by Genre
-            <div className="scrollbox">
+
+            <div className="genrebox">
                 <p onClick={handleAction}>Action</p>
                 <p onClick={handleAdventure}>Adventure</p>
                 <p onClick={handleAnimation}>Animation</p>
@@ -309,7 +310,7 @@ const SwipeContainer = ({ fetchUrl1, fetchUrl2, fetchUrl3, fetchUrl4, fetchUrl5,
                 <p onClick={handleWar}>War</p>
                 <p onClick={handleWestern}>Western</p>
             </div>
-        </div>
+            
         </div>
 
 
