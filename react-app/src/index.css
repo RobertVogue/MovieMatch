@@ -687,3 +687,15 @@
 .chatmovies {
     width: 900px;
 }
+.scrollbox > p {
+    color: white;
+    margin-right: 10px;
+}
+.scrollbox > p:hover {
+    transition: 1s;
+    font-size: 19px;
+}
+.scrollbox {
+    display: flex;
+    margin-top: 800px;
+}
